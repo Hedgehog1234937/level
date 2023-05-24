@@ -6,6 +6,10 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     temperature = input.temperature()
+    temperature += 1.8 * temperature
+    temperature += 32
+    basic.showNumber(temperature)
+    basic.showString("*F")
 })
 basic.forever(function () {
     x = input.acceleration(Dimension.X)
